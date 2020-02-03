@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Temperaturmåler</title>
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+    <svg version="1.1" width="300px" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 200 500" style="enable-background:new 0 0 200 500;" xml:space="preserve">
+    <style type="text/css">
+        .neutral{fill:#ffffff;}
+        .varme{fill:#E8FF3F;}
+        .kulde{fill:#2A30FF;}
+    </style>
+    <g>
+        <rect id="baggrund" x="50" y="50" class="varme" width="100" height="300"/> <!--Varme bagrund-->
+        <rect id="baggrund" x="50" y="350" class="kulde" width="100" height="200"/> <!--Kolde bagrund-->
+    </g>
+    <g>
+        <rect id="neutral" x="50" y="50" class="neutral" width="100" height="400"/>
+    </g>
+    </svg>
+
+        <script>
+            var temp = 15; // virker mellem -20 og 30 grader
+            temp += 20; // sætter værdien til at være mellem 0 og 50
+            var procent = 500 - (500 * (temp/50));
+
+            document.getElementById("neutral").setAttribute("height", procent);
+        </script>
+
+    </body>
+</html>
