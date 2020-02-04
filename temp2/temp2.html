@@ -10,20 +10,20 @@
         viewBox="0 0 200 500" style="enable-background:new 0 0 200 500;" xml:space="preserve">
     <style type="text/css">
         .neutral{fill:#ffffff;}
-        .varme{fill:#E8FF3F;}
+        .varme{fill: lightcoral;}
         .kulde{fill:#2A30FF;}
     </style>
     <g>
-        <rect id="baggrund" x="50" y="50" class="varme" width="100" height="300"/> <!--Varme bagrund-->
-        <rect id="baggrund" x="50" y="350" class="kulde" width="100" height="200"/> <!--Kolde bagrund-->
+        <rect id="baggrund" x="50" y="10" class="varme" width="100" height="300"/> <!--Varme bagrund-->
+        <rect id="baggrund" x="50" y="310" class="kulde" width="100" height="200"/> <!--Kolde bagrund-->
     </g>
     <g>
-        <rect id="neutral" x="50" y="50" class="neutral" width="100" height="400"/>
+        <rect id="neutral" x="50" y="10" class="neutral" width="100" height="400"/>
     </g>
     </svg>
 
         <script>
-            var temp = 15; // virker mellem -20 og 30 grader
+            var temp = 22; // virker mellem -20 og 30 grader
             temp += 20; // sætter værdien til at være mellem 0 og 50
             var procent = 500 - (500 * (temp/50));
 
