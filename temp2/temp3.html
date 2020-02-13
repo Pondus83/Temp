@@ -81,17 +81,19 @@
         </svg>
 
         <script>
-            var temp = 0; // virker mellem -20 og 30 grader
-            var height = 500 - (temp + 20) * 10;
+            var temp = -7; // virker mellem -20 og 30 grader
+            var height;
 
             if (temp>0) {
+                height = 500 - (temp + 20) * 10;
                 document.getElementById("varme").setAttribute("y", 10 + height);
                 document.getElementById("varme").setAttribute("height", 300 - height);
             }
             if (temp<0) {
+                height = 200 - (temp + 20) * 10;
                 document.getElementById("varme").style.fill = "blue";
                 document.getElementById("varme").setAttribute("y", 310);
-                document.getElementById("varme").setAttribute("height", 500 - height);
+                document.getElementById("varme").setAttribute("height", height);
             }
             if (temp == 0) {
                 document.getElementById("varme").style.fill = "yellow";
